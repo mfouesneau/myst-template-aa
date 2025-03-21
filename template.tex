@@ -1,0 +1,116 @@
+\documentclass[ [-options.class_options-] ]{aa}
+%\usepackage{preprint}
+\usepackage{hyperref}
+
+[-IMPORTS-]
+
+% colors for hyperlinks
+\hypersetup{colorlinks=true, linkcolor=purple, urlcolor=blue, citecolor=cyan, anchorcolor=black}
+
+\usepackage[utf8]{inputenc}	% allow utf-8 input
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{lineno}					% Line numbers
+\usepackage{tikz} 					% ORCiD insertion
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[yyyymmdd]{datetime}
+\usepackage{hyperref}
+\usepackage{rotating}
+\usepackage{amsmath,amssymb}
+\usepackage{multirow}
+\usepackage{journals}
+
+%% Bibliography options
+% \bibliographystyle{unsrtnat}
+% for the bibliography, at the end
+\bibliographystyle{aa} % style aa.bst
+
+ %% Special figure caption options
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
+\usepackage{sidecap}
+\sidecaptionvpos{figure}{c}
+
+\definecolor{lime}{HTML}{A6CE39}
+\DeclareRobustCommand{\orcidicon}{
+	\begin{tikzpicture}
+	\draw[lime, fill=lime] (0,0)
+	circle [radius=0.16]
+	node[white] {{\fontfamily{qag}\selectfont \tiny ID}};
+	\draw[white, fill=white] (-0.0625,0.095)
+	circle [radius=0.007];
+	\end{tikzpicture}
+	\hspace{-2mm}
+}
+
+%%%%%%%%%%%%%%    Front matter    %%%%%%%%%%%%%%
+\begin{document}
+%%% Title 
+\title{[-doc.title-]}
+
+%%% Author list
+\author{%
+[# for author in doc.authors #]
+[--author.name--][#- if author.orcid -#]\href{https://orcid.org/[-author.orcid-]}{\orcidicon}[#- endif -#]
+\inst{[# for affiliation in author.affiliations #]\ref{inst:[-affiliation.index-]}[# if not loop.last #], [# endif #][# endfor #]}
+[# if author.corresponding #]
+\thanks{\texttt{[-author.email-]}}
+[#- endif #]
+[# if not loop.last #]
+\and
+[# endif #]
+[# endfor #]
+}
+
+%%% Institutes
+\institute{
+[# for affiliation in doc.affiliations #]
+[-affiliation.value.name-]\relax\label{inst:[-affiliation.index-]}
+[# if not loop.last #]
+\and
+[# endif #]
+[# endfor #]
+}
+
+[# if parts.abstract #]
+\abstract{}{
+[-parts.abstract-]
+}{~}{~}{}
+[# endif #]
+
+[# if doc.keywords #]
+\keywords{[-doc.keywords|join("; ")-]}
+[# endif #]
+
+\date{Version: \today\ -- Received -; Accepted -}
+
+\maketitle
+
+%%%%%%%%%%%%%%%  Main text   %%%%%%%%%%%%%%%
+
+[-CONTENT-]
+
+[# if parts.acknowledgments #]
+%%%%%%%%%%%%% Acknowledgements %%%%%%%%%%%%%
+\section*{Acknowledgements}
+\footnotesize
+[- parts.acknowledgments -]
+\normalsize
+[# endif #]
+
+[# if options.link #]
+\section*{Original article}
+\footnotesize
+This article is available online at the following URL: \href{[-options.link-]}{[-options.link-]}
+\normalsize
+[# endif #]
+
+%%%%%%%%%%%%%%   Bibliography   %%%%%%%%%%%%%%
+[# if doc.bibliography #]
+\bibliography{[- doc.bibliography | join(", ") -]}
+[# endif #]
+
+\end{document}
