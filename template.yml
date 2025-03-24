@@ -55,15 +55,32 @@ files:
 packages:
   - amsmath
   - amssymb
+  - babel
+  - calc
+  - cuted
+  - datetime
+  - enumerate
+  - etex
+  - fancyhdr
+  - fontenc
   - graphicx
   - hyperref
+  - inputenc
   - journals
   - lineno
+  - linenoaa
+  - longtable
+  - marginnote
   - multirow
   - natbib
+  - newfloat
+  - orcid
   - rotating
+  - scalerel
+  - setspace
+  - textcomp
   - tikz 
   - txfonts
   - url
   - xcolor
-  - orcid
+  - xspace
