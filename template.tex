@@ -1,50 +1,40 @@
 \documentclass[ [-options.class_options-] ]{aa}
 %\usepackage{preprint}
-\usepackage{hyperref}
 
+
+\usepackage[utf8]{inputenc}	% allow utf-8 input
+\usepackage[T1]{fontenc}
+\usepackage[yyyymmdd]{datetime}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{journals}
+\usepackage{lineno}
+\usepackage{multirow}
+\usepackage{natbib}
+\usepackage{rotating}
+\usepackage{txfonts}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{orcid}
+
+%% other imports (yml front matter exports.format.imports)
 [-IMPORTS-]
 
 % colors for hyperlinks
 \hypersetup{colorlinks=true, linkcolor=purple, urlcolor=blue, citecolor=cyan, anchorcolor=black}
 
-\usepackage[utf8]{inputenc}	% allow utf-8 input
-\usepackage[T1]{fontenc}
-\usepackage{xcolor}
-\usepackage{lineno}					% Line numbers
-\usepackage{tikz} 					% ORCiD insertion
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{xcolor}
-\usepackage{url}
-\usepackage[yyyymmdd]{datetime}
-\usepackage{hyperref}
-\usepackage{rotating}
-\usepackage{amsmath,amssymb}
-\usepackage{multirow}
-\usepackage{journals}
-
 %% Bibliography options
 % \bibliographystyle{unsrtnat}
 % for the bibliography, at the end
 \bibliographystyle{aa} % style aa.bst
+% fix some weird error message
+\let\bibfont\relax
 
  %% Special figure caption options
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
-\usepackage{sidecap}
-\sidecaptionvpos{figure}{c}
-
-\definecolor{lime}{HTML}{A6CE39}
-\DeclareRobustCommand{\orcidicon}{
-	\begin{tikzpicture}
-	\draw[lime, fill=lime] (0,0)
-	circle [radius=0.16]
-	node[white] {{\fontfamily{qag}\selectfont \tiny ID}};
-	\draw[white, fill=white] (-0.0625,0.095)
-	circle [radius=0.007];
-	\end{tikzpicture}
-	\hspace{-2mm}
-}
 
 %%%%%%%%%%%%%%    Front matter    %%%%%%%%%%%%%%
 \begin{document}

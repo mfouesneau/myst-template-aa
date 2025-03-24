@@ -46,33 +46,24 @@ options:
     default: twocolumn
 files:
   - template.tex
-  - preprint.sty
   - aa.cls
   - aa.bst
   - linenoaa.sty
   - journals.sty
+  - orcid.sty
+
 packages:
   - amsmath
   - amssymb
-  - amsthm
-  - authblk
-  - background
-  - fancyhdr
-  - fontenc
-  - geometry
-  - graphic
+  - graphicx
   - hyperref
-  - inputenc
+  - journals
   - lineno
-  - lipsum
   - multirow
   - natbib
-  - newfloat
   - rotating
-  - scalerel
-  - sidecap
-  - tikz
-  - titlesec
+  - tikz 
   - txfonts
   - url
   - xcolor
+  - orcid

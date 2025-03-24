@@ -1,0 +1,203 @@
+% Created with jtex v.1.0.20
+\documentclass[ twocolumns, longauth ]{aa}
+%\usepackage{preprint}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  imports  %%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% colors for hyperlinks
+\hypersetup{colorlinks=true, linkcolor=purple, urlcolor=blue, citecolor=cyan, anchorcolor=black}
+
+\usepackage[utf8]{inputenc}	% allow utf-8 input
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{lineno}					% Line numbers
+\usepackage{tikz} 					% ORCiD insertion
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[yyyymmdd]{datetime}
+\usepackage{hyperref}
+\usepackage{rotating}
+\usepackage{amsmath,amssymb}
+\usepackage{multirow}
+\usepackage{journals}
+
+%% Bibliography options
+% \bibliographystyle{unsrtnat}
+% for the bibliography, at the end
+\bibliographystyle{aa} % style aa.bst
+
+ %% Special figure caption options
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
+\usepackage{sidecap}
+\sidecaptionvpos{figure}{c}
+
+\definecolor{lime}{HTML}{A6CE39}
+\DeclareRobustCommand{\orcidicon}{
+	\begin{tikzpicture}
+	\draw[lime, fill=lime] (0,0)
+	circle [radius=0.16]
+	node[white] {{\fontfamily{qag}\selectfont \tiny ID}};
+	\draw[white, fill=white] (-0.0625,0.095)
+	circle [radius=0.007];
+	\end{tikzpicture}
+	\hspace{-2mm}
+}
+
+%%%%%%%%%%%%%%    Front matter    %%%%%%%%%%%%%%
+\begin{document}
+%%% Title 
+\title{An Astronomy & astrophysics (A&A) Template}
+
+%%% Author list
+\author{%
+Morgan Fouesneau\href{https://orcid.org/0000-0001-9256-5516}{\orcidicon}\inst{\ref{inst:1}}
+\thanks{\texttt{fouesneau@mpia.de}}}
+
+%%% Institutes
+\institute{
+Max Planck Institute for Astronomy, Königstuhl 17, 69117 Heidelberg, Germany\relax\label{inst:1}
+}
+
+\abstract{}{
+Morbi eu neque et enim euismod cursus sit amet sit amet elit: Fusce eget neque placerat, vehicula dui id, placerat velit. Proin pellentesque fermentum sollicitudin. Etiam egestas sed dolor rutrum faucibus. Nunc ac viverra justo. Vestibulum eget erat pretium sem blandit placerat ullamcorper nec velit. Aliquam orci enim, luctus tempor euismod a, aliquam in ex. Morbi ultrices sapien quis neque sagittis condimentum.
+}{~}{~}{}
+
+\keywords{tutorial; python; seismic; attributes}
+
+\date{Version: \today\ -- Received -; Accepted -}
+
+\maketitle
+
+%%%%%%%%%%%%%%%  Main text   %%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel,
+wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium
+at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed
+accumsan bibendum, erat ligula aliquet magna, vitae ornare
+odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Sus-
+pendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum
+sociis natoque penatibus et magnis dis parturient montes, nasce-
+tur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper
+vestibulum turpis. Pellentesque cursus luctus mauris.
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non,
+volutpat at, tincidunt tristique, libero. Vivamus viverra fermen-
+tum felis. Donec nonummy pellentesque ante. Phasellus adip-
+iscing semper elit. Proin fermentum massa ac quam. Sed diam
+turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas
+lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit
+a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend
+consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tin-
+cidunt purus vel magna. Integer non enim. Praesent euismod
+nunc eu purus. Donec bibendum quam in tellus. Nullam cursus
+pulvinar lectus. Donec et mi. Nam vulputate metus eu enim.
+Vestibulum pellentesque felis eu massa.
+
+\section{Headings: first level}\label{sec:headings}
+
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed
+ac odio. Sed vehicula hendrerit sem. Duis non odio. Morbi ut
+dui. Sed accumsan risus eget odio. In hac habitasse platea dic-
+tumst. Pellentesque non elit. Fusce sed justo eu urna porta tin-
+cidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac,
+erat. Morbi quis dolor. Donec pellentesque, erat ac sagittis sem-
+per, nunc dui lobortis purus, quis congue purus metus ultricies
+tellus. Proin et quam. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos hymenaeos. Praesent
+sapien turpis, fermentum vel, eleifend faucibus, vehicula eu, la-
+cus.
+
+See Section Headings:~first~level.
+
+\subsection{Headings: second level}
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum,
+nulla a faucibus semper, leo velit ultricies tellus, ac venenatis
+arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, au-
+gue quis sagittis posuere, turpis lacus congue quam, in hendrerit
+risus eros eget felis. Maecenas eget erat in sapien mattis port-
+titor. Vestibulum porttitor. Nulla facilisi. Sed a turpis eu lacus
+commodo facilisis. Morbi fringilla, wisi in dignissim interdum,
+justo lectus sagittis dui, et vehicula libero dui cursus dui. Mau-
+ris tempor ligula sed lacus. Duis cursus enim ut augue. Cras
+ac magna. Cras nulla. Nulla egestas. Curabitur a leo. Quisque
+egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur
+consectetuer.
+
+\begin{equation}
+\xi _{ij}(t)= {\frac {\alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}{\sum _{i=1}^{N} \sum _{j=1}^{N} \alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}}
+\end{equation}
+
+\subsubsection{Headings: third level}
+
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit
+amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Prae-
+sent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut
+lectus eros, malesuada sit amet, fermentum eu, sodales cursus,
+magna. Donec eu purus. Quisque vehicula, urna sed ultricies
+auctor, pede lorem egestas dui, et convallis elit erat sed nulla.
+Donec luctus. Curabitur et nunc. Aliquam dolor odio, com-
+modo pretium, ultricies non, pharetra in, velit. Integer arcu est,
+nonummy in, fermentum faucibus, egestas vel, odio.
+
+\subsection{Examples of citations, figures, tables, references}\label{sec:others}
+
+Pellentesque habitant morbi tristique senectus et netus et male-
+suada fames ac turpis egestas. Donec odio elit, dictum in, hen-
+drerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet
+odio. Integer vitae justo. Aliquam vestibulum fringilla lorem.
+Sed neque lectus, consectetuer at, consectetuer sed, eleifend ac,
+lectus. Nulla facilisi. Pellentesque eget lectus. Proin eu metus.
+Sed porttitor. In hac habitasse platea dictumst. Suspendisse
+eu lectus. Ut mi mi, lacinia sit amet, placerat et, mollis vitae,
+dui. Sed ante tellus, tristique ut, iaculis eu, malesuada ac, dui.
+Mauris nibh leo, facilisis non, adipiscing quis, ultrices a, dui.
+
+\citet{kour2014real, kour2014fast}  \citep{hadash2018estimate}.
+
+\subsection{Figures}
+
+See Figure Figure~\ref{fig-fig1}.
+Here is how you add footnotes[\^bignote]. Sed feugiat. Cum
+sociis natoque penatibus et magnis dis parturient montes, nasce-
+tur ridiculus mus. Ut pellentesque augue sed urna. Vestibulum
+diam eros, fringilla et, consectetuer eu, nonummy id, sapien.
+Nullam at lectus. In sagittis ultrices mauris. Curabitur male-
+suada erat sit amet massa. Fusce blandit. Aliquam erat volutpat.
+Aliquam euismod. Aenean vel lectus. Nunc imperdiet justo nec
+dolor.
+
+\^bignote: Here's one with multiple paragraphs and code.
+
+\begin{verbatim}
+Indent paragraphs to include them in the footnote.
+
+`{ my code }`
+
+Add as many paragraphs as you like.
+\end{verbatim}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{files/d13f4e2086e3ccb73c95202b03936ebf.png}
+\caption[]{This is the figure caption!
+Something! A legend!?}
+\label{fig-fig1}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%   Bibliography   %%%%%%%%%%%%%%
+\bibliography{main.bib}
+
+\end{document}
