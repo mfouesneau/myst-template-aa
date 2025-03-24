@@ -38,6 +38,7 @@ doc:
   - id: keywords
     required: true
   - id: bibliography
+  - id: affiliations
 options:
   - id: link
     type: string
