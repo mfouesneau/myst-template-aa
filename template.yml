@@ -7,7 +7,7 @@ thumbnail: ./thumbnail.png
 authors:
   - name: Morgan Fouesneau
     orcid: 0000-0001-9256-5516
-    affiliation: mpia
+    affiliations: mpia
     github: https://github.com/mfouesneau
 affiliations:
     - id: mpia
