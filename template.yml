@@ -8,10 +8,7 @@ authors:
   - name: Morgan Fouesneau
     orcid: 0000-0001-9256-5516
     affiliation: mpia
-    corresponding: true
     github: https://github.com/mfouesneau
-  
-      - Max Planck Institute for Astronomy
 affiliations:
     - id: mpia
       institution: Max Planck Institute for Astronomy, Königstuhl 17, 69117 Heidelberg, Germany 
